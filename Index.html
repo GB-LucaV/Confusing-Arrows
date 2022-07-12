@@ -6,8 +6,6 @@
     <title>Unity WebGL Player | Confusing-Arrows</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script type="text/javascript" src="TemplateData/Unity.js"></script>
-    <script type="text/javascript" src="MainGame.ts"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -119,10 +117,10 @@
 
       function handleMsg(e) {
         //Origin should be GameBus FrontEnd
-        if(e.origin == "https://localhost:8100") {
+        if(e.origin == "https://app4b.gamebus.eu") {
             dataFromGamebus = e.data;
         }        
-        else if(e.origin === "https://localhost:8081"){
+        else if(e.origin === "https://gb-lucav.github.io/Confusing-Arrows/Index.html"){
           if(dataFromGamebus !== null){
             SendMessageToUnity(dataFromGamebus);
           }
