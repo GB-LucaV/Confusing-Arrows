@@ -119,10 +119,10 @@
 
       function handleMsg(e) {
         //Origin should be GameBus FrontEnd
-        if(e.origin == "https://app4b.gamebus.eu") {
+        if(e.origin == "https://localhost:8100") {
             dataFromGamebus = e.data;
         }        
-        else if(e.origin === "https://gb-lucav.github.io/Confusing-Arrows/Index.html"){
+        else if(e.origin === "https://localhost:8081"){
           if(dataFromGamebus !== null){
             SendMessageToUnity(dataFromGamebus);
           }
