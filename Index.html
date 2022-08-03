@@ -116,6 +116,7 @@
       
 
       function handleMsg(e) {
+        console.log(">>>>>>>>>>>>>", e);
         //Origin should be GameBus FrontEnd
         if(e.origin == "https://app4b.gamebus.eu") {
             dataFromGamebus = e.data;
